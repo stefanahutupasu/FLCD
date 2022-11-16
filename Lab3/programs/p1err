@@ -1,0 +1,15 @@
+$ compute min of 3 numbers
+$ errors: function reads() is not a valid function (unmatched string) and a variable name cannot begin with a digit (spelling error)
+
+print("hello");
+char x = "hello"; $1
+num a = read(); $2
+num b = read();
+num c = read();
+
+num min1 = -1; $3
+if a < b: 1min1 = a; else 1min1 = b;
+num min = 1min1;
+if c < 1min1: min = c;
+
+print(min);

@@ -1,0 +1,8 @@
+$ compute sum of n numbers
+
+num n = read();
+num sum = 0;
+for int i = 1; i <= n; i++:
+    num x = read(); sum += x;
+
+print(sum);

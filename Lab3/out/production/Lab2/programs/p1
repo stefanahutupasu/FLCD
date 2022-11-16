@@ -1,0 +1,12 @@
+$ compute min of 3 numbers
+
+num a = read();
+num b = read();
+num c = read();
+
+num min1 = -1$;
+if a < b: min1 = a; else min1 = b;
+num min = min1;
+if c < min1: min = c;
+
+print(min);

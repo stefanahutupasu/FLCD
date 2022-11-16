@@ -1,0 +1,13 @@
+$ check if number is prime
+
+num n = read();
+n = 2;
+
+fun is_prime(num n):
+    if n == 2 or n is 3: ret true;
+    if n <= 1 or n mod 2 is 0 or n mod 3 is 0: ret false;
+    for int i = 5; i * i <= n; i+= 6:
+        if n mod i is 0 or n mod (i + 2) is 0: ret false;
+    ret true;
+
+print(is_prime(n));

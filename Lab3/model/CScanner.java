@@ -17,10 +17,11 @@ public class CScanner {
     private int index;
     private int currentLine;
     private String lastFoundToken = "";
+    private FA fa_const;
 
     private String faultToken;
 
-    public CScanner(String program, List<String> tokens) {
+    public CScanner(String program, List<String> tokens, FA fa_const) {
        //System.out.println(program);
        // System.out.println(tokens);
         this.program = program;
@@ -29,6 +30,7 @@ public class CScanner {
         this.pif = new ArrayList<>();
         this.index = 0;
         this.currentLine = 1;
+        this.fa_const = fa_const;
     }
 
     public String getFaultToken() {
@@ -93,7 +95,47 @@ public class CScanner {
 
     //use regex to match int constants
     private boolean intConstant() {
-        Pattern intRegex = Pattern.compile("^([-]?[1-9]\\d*|0)");
+
+        boolean found = true;
+        int end_index = 1;
+        //String currentToken = program.substring(index, index+end_index);
+        if(program.charAt(index) == '-')
+            end_index = 2;
+        String currentToken = program.substring(index, index+end_index);
+
+        while(fa_const.checkAccepted(currentToken))
+        {
+            end_index +=1;
+            currentToken = program.substring(index, index+end_index);
+
+        }
+        if(end_index == 1)
+            return false;
+        else
+        {   String token = program.substring(index, index + end_index - 1);
+            if (pif.size() > 0) {
+            Integer pif_last = pif.get(pif.size() - 1).getValue();
+            //System.out.println(pif_last);
+            //special case. If the last element in the pif was not in token.in (token list) then we do not consider
+            //it an intConstant (it would have been if pif_last was 0)
+            if ((token.charAt(0) == '+' || token.charAt(0) == '-') && (pif_last == -1 || pif_last == -2)) {
+                //System.out.println("of1");
+                return false;
+            }
+            //contains requires a String, so we concatenate the character to an empty string
+            //System.out.println(program.charAt(index+ matcher.end()));
+            //System.out.println(Character.isDigit(program.charAt(index+ matcher.end())));
+
+            System.out.println("Found int constant: " + token);
+                pif.add(new Pair<>("intConst", -1));
+                symbolTable.insert(token);
+                lastFoundToken = token;
+                index += (end_index - 1);
+                return true;
+        }
+            }
+        return false;
+        /*Pattern intRegex = Pattern.compile("^([-]?[1-9]\\d*|0)");
         Matcher matcher = intRegex.matcher(program.substring(index));
         if (matcher.find()) {
             String token = matcher.group(1);
@@ -123,7 +165,7 @@ public class CScanner {
             index += matcher.end();
             return true;
         }
-        return false;
+        return false;*/
     }
 
     //checks for token from token.in

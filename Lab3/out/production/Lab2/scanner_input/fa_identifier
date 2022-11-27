@@ -1,0 +1,5 @@
+states={p,r}
+alphabet={q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m,0,1,2,3,4,5,6,7,8,9}
+initial_state=p
+final_states={r}
+transitions={(p, q, r); (p, w, r); (p, e, r); (p, r, r); (p, t, r); (p, y, r); (p, u, r); (p, i, r); (p, o, r); (p, p, r); (p, a, r); (p, s, r); (p, d, r); (p, f, r); (p, g, r); (p, h, r); (p, j, r); (p, k, r); (p, l, r); (p, z, r); (p, x, r); (p, c, r); (p, v, r); (p, b, r); (p, n, r); (p, m, r); (r, q, r); (r, w, r); (r, e, r); (r, r, r); (r, t, r); (r, y, r); (r, u, r); (r, i, r); (r, o, r); (r, p, r); (r, a, r); (r, s, r); (r, d, r); (r, f, r); (r, g, r); (r, h, r); (r, j, r); (r, k, r); (r, l, r); (r, z, r); (r, x, r); (r, c, r); (r, v, r); (r, b, r); (r, n, r); (r, m, r); (r, 0, r); (r, 1, r); (r, 2, r); (r, 3, r); (r, 4, r); (r, 5, r); (r, 6, r); (r, 7, r); (r, 8, r); (r, 9, r)}

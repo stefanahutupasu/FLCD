@@ -1,0 +1,38 @@
+N = { program, stmtlist, stmt, stmtTemp, decl, type, simpletype, arraytype, cmpdstmt, simplestmt, iostmt, assignstmt, expression, term, factor, indexedidentifier, operation, structstmt, ifstmt, tempIf, condition, relation, forstmt, whilestmt, forheader, operation }
+E = { noint, string, char, while, for, if, else, cin, cout, {, }, (, ), ;, :, +, -, *, /, %, id, const, <<, >>, lt, lte, is, dif, gte, gt, eq, ad, sb, mp, dv }
+S = program
+P = {
+	program -> stmtlist,
+	stmtlist -> stmt stmtTemp,
+	stmtTemp -> E | stmt ; stmtlist,
+	stmt -> decl | simplestmt | structstmt,
+	decl -> type id,
+	type -> simpletype | arraytype,
+	simpletype -> noint | string | char,
+	arraytype -> E | simpletype [ noint ],
+	cmpdstmt -> { stmtlist },
+	simplestmt -> assignstmt | iostmt,
+	structsmst -> iftsmt | whilestmt | forstmt | cmpdstmt,
+	ifstmt -> if ( condition ) stmt tempIf,
+	tempIf -> E | else stmt,
+	forstmt -> for forheader stmt,
+	forheader -> ( assignstmt ; condition ; assignstmt ),
+	whilestmt -> while condition stmt,
+	assignstmt -> id operation expression,
+	operation -> eq | ad | sb | mp | dv,
+	expression -> arithmeticSc | arithmeticPr,
+	arithmeticSc -> multiplicationSc multiplicationPr,
+	arithmeticPr -> + arithmeticSc arithmeticPr | - arithmeticSc arithmeticPr | E
+	multiplicationPr -> * multiplicationSc multiplicationPr | / multiplicationSc multiplicationPr | % multiplicationSc multiplicationPr | E,
+	multiplicationSc -> ( expression ) | id | const,
+	indexedidentifier -> id [ const ],
+	relation -> lt | lte | is | dif | gte | gt
+	iostmt -> cin >> id | cout << id,
+	condition -> ( id relation const )
+}
+
+	
+
+	
+
+	

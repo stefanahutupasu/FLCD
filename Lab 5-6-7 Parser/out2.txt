@@ -1,0 +1,93 @@
+State: q
+Current position: 0
+Working stack: []
+Input stack: ['S']
+---expand---
+State: q
+Current position: 0
+Working stack: [('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---advance---
+State: q
+Current position: 1
+Working stack: [('S', 0), 'a']
+Input stack: ['S', 'b', 'S']
+---expand---
+State: q
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 2)]
+Input stack: ['c', 'b', 'S']
+---advance---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 2), 'c']
+Input stack: ['b', 'S']
+---advance---
+State: q
+Current position: 3
+Working stack: [('S', 0), 'a', ('S', 2), 'c', 'b']
+Input stack: ['S']
+---expand---
+State: q
+Current position: 3
+Working stack: [('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 3
+Working stack: [('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 3
+Working stack: [('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 1)]
+Input stack: ['a', 'S']
+---momentary insuccess---
+State: b
+Current position: 3
+Working stack: [('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 1)]
+Input stack: ['a', 'S']
+---another try---
+State: q
+Current position: 3
+Working stack: [('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2)]
+Input stack: ['c']
+---advance---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2), 'c']
+Input stack: []
+---success---
+[('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2), 'c']
+-------RESULT:-------
+Sequence is accepted!
+
+Parsing tree: 
+index info parent  left_sibling
+0  S  -1  -1
+1  a  0  2
+2  S  -1  4
+3  c  2  -1
+4  b  -1  5
+5  S  -1  -1
+6  c  5  -1

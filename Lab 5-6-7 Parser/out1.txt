@@ -1,0 +1,893 @@
+State: q
+Current position: 0
+Working stack: []
+Input stack: ['S']
+---expand---
+State: q
+Current position: 0
+Working stack: [('S', 0)]
+Input stack: ['A', 'B']
+---expand---
+State: q
+Current position: 0
+Working stack: [('S', 0), ('A', 0)]
+Input stack: ['(', 'S', ')', 'B']
+---advance---
+State: q
+Current position: 1
+Working stack: [('S', 0), ('A', 0), '(']
+Input stack: ['S', ')', 'B']
+---expand---
+State: q
+Current position: 1
+Working stack: [('S', 0), ('A', 0), '(', ('S', 0)]
+Input stack: ['A', 'B', ')', 'B']
+---expand---
+State: q
+Current position: 1
+Working stack: [('S', 0), ('A', 0), '(', ('S', 0), ('A', 0)]
+Input stack: ['(', 'S', ')', 'B', ')', 'B']
+---momentary insuccess---
+State: b
+Current position: 1
+Working stack: [('S', 0), ('A', 0), '(', ('S', 0), ('A', 0)]
+Input stack: ['(', 'S', ')', 'B', ')', 'B']
+---another try---
+State: q
+Current position: 1
+Working stack: [('S', 0), ('A', 0), '(', ('S', 0), ('A', 1)]
+Input stack: ['int', 'C', 'B', ')', 'B']
+---advance---
+State: q
+Current position: 2
+Working stack: [('S', 0), ('A', 0), '(', ('S', 0), ('A', 1), 'int']
+Input stack: ['C', 'B', ')', 'B']
+---expand---
+State: q
+Current position: 2
+Working stack: [('S', 0), ('A', 0), '(', ('S', 0), ('A', 1), 'int', ('C', 0)]
+Input stack: ['*', 'A', 'B', ')', 'B']
+---momentary insuccess---
+State: b
+Current position: 2
+Working stack: [('S', 0), ('A', 0), '(', ('S', 0), ('A', 1), 'int', ('C', 0)]
+Input stack: ['*', 'A', 'B', ')', 'B']
+---another try---
+State: b
+Current position: 2
+Working stack: [('S', 0), ('A', 0), '(', ('S', 0), ('A', 1), 'int']
+Input stack: ['C', 'B', ')', 'B']
+---back---
+State: b
+Current position: 1
+Working stack: [('S', 0), ('A', 0), '(', ('S', 0), ('A', 1)]
+Input stack: ['int', 'C', 'B', ')', 'B']
+---another try---
+State: b
+Current position: 1
+Working stack: [('S', 0), ('A', 0), '(', ('S', 0)]
+Input stack: ['A', 'B', ')', 'B']
+---another try---
+State: b
+Current position: 1
+Working stack: [('S', 0), ('A', 0), '(']
+Input stack: ['S', ')', 'B']
+---back---
+State: b
+Current position: 0
+Working stack: [('S', 0), ('A', 0)]
+Input stack: ['(', 'S', ')', 'B']
+---another try---
+State: q
+Current position: 0
+Working stack: [('S', 0), ('A', 1)]
+Input stack: ['int', 'C', 'B']
+---momentary insuccess---
+State: b
+Current position: 0
+Working stack: [('S', 0), ('A', 1)]
+Input stack: ['int', 'C', 'B']
+---another try---
+State: b
+Current position: 0
+Working stack: [('S', 0)]
+Input stack: ['A', 'B']
+---another try---
+-------RESULT:-------
+Error at position : 0
+State: q
+Current position: 0
+Working stack: []
+Input stack: ['S']
+---expand---
+State: q
+Current position: 0
+Working stack: [('S', 0)]
+Input stack: ['A', 'B']
+---expand---
+State: q
+Current position: 0
+Working stack: [('S', 0), ('A', 0)]
+Input stack: ['(', 'S', ')', 'B']
+---momentary insuccess---
+State: b
+Current position: 0
+Working stack: [('S', 0), ('A', 0)]
+Input stack: ['(', 'S', ')', 'B']
+---another try---
+State: q
+Current position: 0
+Working stack: [('S', 0), ('A', 1)]
+Input stack: ['int', 'C', 'B']
+---advance---
+State: q
+Current position: 1
+Working stack: [('S', 0), ('A', 1), 'int']
+Input stack: ['C', 'B']
+---expand---
+State: q
+Current position: 1
+Working stack: [('S', 0), ('A', 1), 'int', ('C', 0)]
+Input stack: ['*', 'A', 'B']
+---momentary insuccess---
+State: b
+Current position: 1
+Working stack: [('S', 0), ('A', 1), 'int', ('C', 0)]
+Input stack: ['*', 'A', 'B']
+---another try---
+State: b
+Current position: 1
+Working stack: [('S', 0), ('A', 1), 'int']
+Input stack: ['C', 'B']
+---back---
+State: b
+Current position: 0
+Working stack: [('S', 0), ('A', 1)]
+Input stack: ['int', 'C', 'B']
+---another try---
+State: b
+Current position: 0
+Working stack: [('S', 0)]
+Input stack: ['A', 'B']
+---another try---
+-------RESULT:-------
+Error at position : 0
+State: q
+Current position: 0
+Working stack: []
+Input stack: ['S']
+---expand---
+State: q
+Current position: 0
+Working stack: [('S', 0)]
+Input stack: ['A', 'B']
+---expand---
+State: q
+Current position: 0
+Working stack: [('S', 0), ('A', 0)]
+Input stack: ['(', 'S', ')', 'B']
+---momentary insuccess---
+State: b
+Current position: 0
+Working stack: [('S', 0), ('A', 0)]
+Input stack: ['(', 'S', ')', 'B']
+---another try---
+State: q
+Current position: 0
+Working stack: [('S', 0), ('A', 1)]
+Input stack: ['int', 'C', 'B']
+---advance---
+State: q
+Current position: 1
+Working stack: [('S', 0), ('A', 1), 'int']
+Input stack: ['C', 'B']
+---expand---
+State: q
+Current position: 1
+Working stack: [('S', 0), ('A', 1), 'int', ('C', 0)]
+Input stack: ['*', 'A', 'B']
+---momentary insuccess---
+State: b
+Current position: 1
+Working stack: [('S', 0), ('A', 1), 'int', ('C', 0)]
+Input stack: ['*', 'A', 'B']
+---another try---
+State: b
+Current position: 1
+Working stack: [('S', 0), ('A', 1), 'int']
+Input stack: ['C', 'B']
+---back---
+State: b
+Current position: 0
+Working stack: [('S', 0), ('A', 1)]
+Input stack: ['int', 'C', 'B']
+---another try---
+State: b
+Current position: 0
+Working stack: [('S', 0)]
+Input stack: ['A', 'B']
+---another try---
+-------RESULT:-------
+Error at position : 0
+State: q
+Current position: 0
+Working stack: []
+Input stack: ['S']
+---expand---
+State: q
+Current position: 0
+Working stack: [('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---advance---
+State: q
+Current position: 1
+Working stack: [('S', 0), 'a']
+Input stack: ['S', 'b', 'S']
+---expand---
+State: q
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---advance---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a']
+Input stack: ['S', 'b', 'S', 'b', 'S']
+---expand---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2)]
+Input stack: ['c', 'b', 'S', 'b', 'S']
+---advance---
+State: q
+Current position: 3
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c']
+Input stack: ['b', 'S', 'b', 'S']
+---advance---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b']
+Input stack: ['S', 'b', 'S']
+---expand---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2)]
+Input stack: ['c', 'b', 'S']
+---advance---
+State: q
+Current position: 5
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2), 'c']
+Input stack: ['b', 'S']
+---momentary insuccess---
+State: b
+Current position: 5
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2), 'c']
+Input stack: ['b', 'S']
+---back---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2)]
+Input stack: ['c', 'b', 'S']
+---another try---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b']
+Input stack: ['S', 'b', 'S']
+---back---
+State: b
+Current position: 3
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c']
+Input stack: ['b', 'S', 'b', 'S']
+---back---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2)]
+Input stack: ['c', 'b', 'S', 'b', 'S']
+---another try---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a']
+Input stack: ['S', 'b', 'S', 'b', 'S']
+---back---
+State: b
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---advance---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a']
+Input stack: ['S', 'b', 'S']
+---expand---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2)]
+Input stack: ['c', 'b', 'S']
+---advance---
+State: q
+Current position: 3
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c']
+Input stack: ['b', 'S']
+---advance---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b']
+Input stack: ['S']
+---expand---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 1)]
+Input stack: ['a', 'S']
+---momentary insuccess---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 1)]
+Input stack: ['a', 'S']
+---another try---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 2)]
+Input stack: ['c']
+---advance---
+State: q
+Current position: 5
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 2), 'c']
+Input stack: []
+---momentary insuccess---
+State: b
+Current position: 5
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 2), 'c']
+Input stack: []
+---back---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 2)]
+Input stack: ['c']
+---another try---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b']
+Input stack: ['S']
+---back---
+State: b
+Current position: 3
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c']
+Input stack: ['b', 'S']
+---back---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2)]
+Input stack: ['c', 'b', 'S']
+---another try---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a']
+Input stack: ['S', 'b', 'S']
+---back---
+State: b
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 2)]
+Input stack: ['c', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 2)]
+Input stack: ['c', 'b', 'S']
+---another try---
+State: b
+Current position: 1
+Working stack: [('S', 0), 'a']
+Input stack: ['S', 'b', 'S']
+---back---
+State: b
+Current position: 0
+Working stack: [('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 0
+Working stack: [('S', 1)]
+Input stack: ['a', 'S']
+---advance---
+State: q
+Current position: 1
+Working stack: [('S', 1), 'a']
+Input stack: ['S']
+---expand---
+State: q
+Current position: 1
+Working stack: [('S', 1), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---advance---
+State: q
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 0), 'a']
+Input stack: ['S', 'b', 'S']
+---expand---
+State: q
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2)]
+Input stack: ['c', 'b', 'S']
+---advance---
+State: q
+Current position: 3
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2), 'c']
+Input stack: ['b', 'S']
+---advance---
+State: q
+Current position: 4
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b']
+Input stack: ['S']
+---expand---
+State: q
+Current position: 4
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 4
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 4
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 1)]
+Input stack: ['a', 'S']
+---momentary insuccess---
+State: b
+Current position: 4
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 1)]
+Input stack: ['a', 'S']
+---another try---
+State: q
+Current position: 4
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2)]
+Input stack: ['c']
+---advance---
+State: q
+Current position: 5
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2), 'c']
+Input stack: []
+---momentary insuccess---
+State: b
+Current position: 5
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2), 'c']
+Input stack: []
+---back---
+State: b
+Current position: 4
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2)]
+Input stack: ['c']
+---another try---
+State: b
+Current position: 4
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b']
+Input stack: ['S']
+---back---
+State: b
+Current position: 3
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2), 'c']
+Input stack: ['b', 'S']
+---back---
+State: b
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 0), 'a', ('S', 2)]
+Input stack: ['c', 'b', 'S']
+---another try---
+State: b
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 0), 'a']
+Input stack: ['S', 'b', 'S']
+---back---
+State: b
+Current position: 1
+Working stack: [('S', 1), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 1
+Working stack: [('S', 1), 'a', ('S', 1)]
+Input stack: ['a', 'S']
+---advance---
+State: q
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 1), 'a']
+Input stack: ['S']
+---expand---
+State: q
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 1), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 1), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 1), 'a', ('S', 1)]
+Input stack: ['a', 'S']
+---momentary insuccess---
+State: b
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 1), 'a', ('S', 1)]
+Input stack: ['a', 'S']
+---another try---
+State: q
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 1), 'a', ('S', 2)]
+Input stack: ['c']
+---advance---
+State: q
+Current position: 3
+Working stack: [('S', 1), 'a', ('S', 1), 'a', ('S', 2), 'c']
+Input stack: []
+---momentary insuccess---
+State: b
+Current position: 3
+Working stack: [('S', 1), 'a', ('S', 1), 'a', ('S', 2), 'c']
+Input stack: []
+---back---
+State: b
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 1), 'a', ('S', 2)]
+Input stack: ['c']
+---another try---
+State: b
+Current position: 2
+Working stack: [('S', 1), 'a', ('S', 1), 'a']
+Input stack: ['S']
+---back---
+State: b
+Current position: 1
+Working stack: [('S', 1), 'a', ('S', 1)]
+Input stack: ['a', 'S']
+---another try---
+State: q
+Current position: 1
+Working stack: [('S', 1), 'a', ('S', 2)]
+Input stack: ['c']
+---momentary insuccess---
+State: b
+Current position: 1
+Working stack: [('S', 1), 'a', ('S', 2)]
+Input stack: ['c']
+---another try---
+State: b
+Current position: 1
+Working stack: [('S', 1), 'a']
+Input stack: ['S']
+---back---
+State: b
+Current position: 0
+Working stack: [('S', 1)]
+Input stack: ['a', 'S']
+---another try---
+State: q
+Current position: 0
+Working stack: [('S', 2)]
+Input stack: ['c']
+---momentary insuccess---
+State: b
+Current position: 0
+Working stack: [('S', 2)]
+Input stack: ['c']
+---another try---
+-------RESULT:-------
+Error at position : 0
+State: q
+Current position: 0
+Working stack: []
+Input stack: ['S']
+---expand---
+State: q
+Current position: 0
+Working stack: [('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---advance---
+State: q
+Current position: 1
+Working stack: [('S', 0), 'a']
+Input stack: ['S', 'b', 'S']
+---expand---
+State: q
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---advance---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a']
+Input stack: ['S', 'b', 'S', 'b', 'S']
+---expand---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2)]
+Input stack: ['c', 'b', 'S', 'b', 'S']
+---advance---
+State: q
+Current position: 3
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c']
+Input stack: ['b', 'S', 'b', 'S']
+---advance---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b']
+Input stack: ['S', 'b', 'S']
+---expand---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2)]
+Input stack: ['c', 'b', 'S']
+---advance---
+State: q
+Current position: 5
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2), 'c']
+Input stack: ['b', 'S']
+---momentary insuccess---
+State: b
+Current position: 5
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2), 'c']
+Input stack: ['b', 'S']
+---back---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b', ('S', 2)]
+Input stack: ['c', 'b', 'S']
+---another try---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c', 'b']
+Input stack: ['S', 'b', 'S']
+---back---
+State: b
+Current position: 3
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2), 'c']
+Input stack: ['b', 'S', 'b', 'S']
+---back---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a', ('S', 2)]
+Input stack: ['c', 'b', 'S', 'b', 'S']
+---another try---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 0), 'a']
+Input stack: ['S', 'b', 'S', 'b', 'S']
+---back---
+State: b
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 1
+Working stack: [('S', 0), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---advance---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a']
+Input stack: ['S', 'b', 'S']
+---expand---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 1)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 2
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2)]
+Input stack: ['c', 'b', 'S']
+---advance---
+State: q
+Current position: 3
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c']
+Input stack: ['b', 'S']
+---advance---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b']
+Input stack: ['S']
+---expand---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---momentary insuccess---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 0)]
+Input stack: ['a', 'S', 'b', 'S']
+---another try---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 1)]
+Input stack: ['a', 'S']
+---momentary insuccess---
+State: b
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 1)]
+Input stack: ['a', 'S']
+---another try---
+State: q
+Current position: 4
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 2)]
+Input stack: ['c']
+---advance---
+State: q
+Current position: 5
+Working stack: [('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 2), 'c']
+Input stack: []
+---success---
+[('S', 0), 'a', ('S', 1), 'a', ('S', 2), 'c', 'b', ('S', 2), 'c']
+-------RESULT:-------
+Sequence is accepted!
+
+Parsing tree: 
+index info parent  left_sibling
+0  S  -1  -1
+1  a  0  2
+2  S  -1  6
+3  a  2  4
+4  S  -1  -1
+5  c  4  -1
+6  b  -1  7
+7  S  -1  -1
+8  c  7  -1
